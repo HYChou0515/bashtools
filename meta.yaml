@@ -1,0 +1,26 @@
+{% set name = "bashtools" %}
+{% set version = "0.1" %}
+
+package:
+  name: "{{ name|lower }}"
+  version: "{{ version }}"
+
+source:
+  path: /home/hychou/bashtoolsPackage/
+
+
+requirements:
+  host:
+    - python
+    - setuptools
+  run:
+    - python
+
+test:
+  imports:
+    - bashtools 
+
+about:
+  license: BSD
+  license_family: BSD
+  summary: Composable command line interface toolkit
